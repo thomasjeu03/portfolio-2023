@@ -1,0 +1,181 @@
+.TitleCard{
+    grid-area: 1/1/2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.QuoteCard{
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    div{
+        border-radius: 0 0 6px 0;
+        padding: 10px;
+        background: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+    }
+    span{
+        text-align: center;
+        transform: translateY(10px);
+        text-decoration: none;
+        margin-top: 18px;
+        u{
+            text-decoration: none;
+        }
+    }
+}
+
+.ResumeCard{
+    grid-area: 1/2/2/4;
+    position: relative;
+    #myResume{
+        margin: 10px;
+    }
+    #sun{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .Paperplane{
+        position: absolute;
+        top: 75%;
+        transform: translateX(-100%);
+        right: 100%;
+        animation: flyOut 20s infinite linear;
+        animation-delay: -6s;
+    }
+    .Paperplane:nth-of-type(2){
+        top: 50%;
+        animation-delay: 0s;
+    }
+    .Paperplane:nth-of-type(3){
+        top: 66%;
+        animation-delay: 9s;
+    }
+    @keyframes flyOut {
+        from {
+            transform: translateX(-100%);
+            right: 100%;
+        }
+        to {
+            transform: translateX(100%);
+            right: 0;
+        }
+    }
+    p{
+        position: absolute;
+        bottom: 1px;
+        right: 10px;
+    }
+}
+
+.LanguagesCard{
+    grid-area: 1/1/2/3;
+}
+
+.SpotifyCard{
+    padding: 10px;
+    color: var(--white-color);
+    position: relative;
+    background: linear-gradient(var(--primary-dark-color), var(--dark-color));
+    //&:after{
+    //    content: "";
+    //    position: absolute;
+    //    bottom: 0;
+    //    left: 0;
+    //    width: 100%;
+    //    max-height: 150px;
+    //    pointer-events: none;
+    //    height: 60%;
+    //    background: linear-gradient(rgba(var(--primary-dark-color-rgb), 0), var(--dark-color));
+    //}
+    h3{
+        font-family: var(--gotham-font);
+        font-size: 40px;
+        line-height: 40px;
+        background: var(--white-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .logoSpotify{
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        width: 27px;
+        aspect-ratio: 1;
+        z-index: 1;
+    }
+    .playlist{
+        margin-top: 10px;
+        border-top: 1px solid rgba(167, 166, 166, 0.3);
+        padding: 10px 0 20px 0;
+        display: grid;
+        width: calc(100% - 37px);
+        height: calc(100% - 30px);
+        overflow-y: scroll;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+        .song{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            padding: 5px;
+            color: var(--white-color);
+            height: 40px;
+            border-radius: 5px;
+            cursor: pointer;
+            .logo{
+                margin-right: 15px;
+                width: 30px;
+                border-radius: 50px;
+                overflow: hidden;
+                aspect-ratio: 1;
+                transform: rotate(0deg);
+                transition: 0.3s ease-in-out;
+            }
+            div{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+                overflow: hidden;
+                b{
+                    font-size: 15px;
+                    line-height: 8px;
+                    font-weight: 900 !important;
+                    white-space: nowrap;
+                }
+                p{
+                    font-size: 13px;
+                    white-space: nowrap;
+                    color: #A7A6A6;
+                }
+            }
+            &:hover{
+                background: rgba(var(--white-color-rgb), 0.3);
+                .logo{
+                    animation: rotation 8s infinite linear;
+                    transition: 0.3s ease-in-out;
+                }
+                @keyframes rotation {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(359deg);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,30 +1,30 @@
 @font-face {
     font-family: 'NewYork';
-    src: url('portfolio-thomas-jeu/src/assets/fonts/NewYork.otf') format('opentype');
+    src: url('../assets/fonts/NewYork.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: 'NeueMontreal';
-    src: url('portfolio-thomas-jeu/src/assets/fonts/NeueMontreal.otf') format('opentype');
+    src: url('../assets/fonts/NeueMontreal.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: 'Manuscribe';
-    src: url('portfolio-thomas-jeu/src/assets/fonts/ManuscribeFree-Italic.otf') format('opentype');
+    src: url('../assets/fonts/ManuscribeFree-Italic.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: 'Cooper';
-    src: url('portfolio-thomas-jeu/src/assets/fonts/Cooper.ttf') format('truetype');
+    src: url('../assets/fonts/Cooper.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gotham';
-    src: url('portfolio-thomas-jeu/src/assets/fonts/Gotham.otf') format('opentype');
+    src: url('../assets/fonts/Gotham.otf') format('opentype');
     font-weight: 900;
     font-style: normal;
 }
@@ -75,12 +75,6 @@
 ::-webkit-scrollbar{
     width: 0;
     height: 0;
-    background-color: rgba(0,0,0,0);
-}
-::-webkit-scrollbar-thumb{
-    background:  var(--white-color);
-    border: 3px solid var(--dark-color);
-    border-radius: 10px;
 }
 *{
     margin: 0;
@@ -124,6 +118,7 @@ figure img{
 }
 h1{
     font-size: 100px;
+    line-height: 80px;
     font-family: var(--title-font);
     font-weight: 100;
     background: -webkit-linear-gradient(45deg, var(--dark-color), rgba(var(--primary-dark-color-rgb), 0.62), var(--dark-color));
@@ -139,6 +134,7 @@ h2{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     width: fit-content;
+    margin-left: auto;
 }
 h3{
     font-size: 25px;
@@ -278,8 +274,7 @@ li{
     border-radius: var(--radius-20);
 }
 .bg{
-    min-width: 100vw;
-    width: auto;
+    width: 100vw;
     height: 100vh;
     position: fixed;
     top: 50%;
@@ -293,7 +288,8 @@ li{
 }
 .bg img{
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 .noise{
     background-image: url(../assets/img/noise.png);
@@ -342,7 +338,6 @@ li{
 }
 .grid3 {
     display: grid;
-    grid-gap: var(--5m);
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     width: 100%;
@@ -350,25 +345,24 @@ li{
 }
 .grid2 {
     display: grid;
-    grid-gap: var(--5m);
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     width: 100%;
     height: auto;
 }
-@media screen and (max-width: 1100px){
-    .grid3{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media screen and (max-width: 650px){
-    .grid3{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .grid2{
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
+/*@media screen and (max-width: 1100px){*/
+/*    .grid3{*/
+/*        grid-template-columns: repeat(2, 1fr);*/
+/*    }*/
+/*}*/
+/*@media screen and (max-width: 650px){*/
+/*    .grid3{*/
+/*        grid-template-columns: repeat(1, 1fr);*/
+/*    }*/
+/*    .grid2{*/
+/*        grid-template-columns: repeat(1, 1fr);*/
+/*    }*/
+/*}*/
 
 .dnone{
     display: none !important;
