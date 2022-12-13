@@ -4,38 +4,55 @@ import '../style/Card.scss'
 import Draggable from 'react-draggable';
 import LocomotiveScroll from 'locomotive-scroll';
 import React, { useEffect ,useRef} from "react";
+import { motion, useMotionValue } from "framer-motion"
 
 import spotifyLogo from '../assets/img/spotify.png';
-import album from '../assets/img/album.webp';
+import arrowe from "../assets/img/arrow.svg";
 
 import Paperplane from "../components/Paperplane.jsx";
+import Arrow from "../components/Arrow.jsx";
 import Song from "../components/Song.jsx";
-import TitleCard from "../components/TitleCard.jsx";
+import CanvaThree from "../components/CanvaThree.jsx";
 
 function HomePage() {
 
     let HomePage_Container = useRef(null);
 
     useEffect(() => {
-
         new LocomotiveScroll({
-            el: HomePage_Container,
+            el: document.querySelector('[data-scroll-container]'),
             smooth: true,
-            multiplier: .5
+            getDirection: true
         });
 
     }, []);
 
     return (
-        <div ref={el => HomePage_Container = el}  className="HomePage_Container">
+        <motion.div
+            initial={{ opacity: 0}}
+            animate={{ opacity: 1}}
+            transition={{
+                duration: 2.5,
+                type: "spring", bounce: 0.25,
+                delay: 1.5
+            }}
+            data-scroll-container
+            data-scroll data-scroll-speed="3"
+            className="HomePage_Container">
             <div className="grid3">
-                    <div className="card">
-                        <Draggable grid={[25, 25]}>
-                            <div>I can now be moved around!</div>
-                        </Draggable>
+                    <div className="FancyCard card">
+                        <h3 data-scroll
+                            data-scroll-direction="horizontal"
+                            data-scroll-position="left"
+                            data-scroll-speed="1">CLEAN & <br/> CLEAR</h3>
+                        <span>&</span>
+                        <h4 data-scroll
+                            data-scroll-direction="horizontal"
+                            data-scroll-position="left"
+                            data-scroll-speed="3" className="fancy-text">SOMETHING DIFFERENT</h4>
                     </div>
                     <a className="card">
-                        b
+                        A
                     </a>
             </div>
             <div className="grid3">
@@ -43,25 +60,25 @@ function HomePage() {
                     <h1>Thomas Jeu</h1>
                     <h2>Front-End Developer</h2>
                 </div>
-                    <a className="card">
-                        c
-                    </a>
+                <a href="https://ecohighland.fr/" target="_blank" rel="noopener" className="LinkCard card">
+                    <Arrow  />
+                </a>
             </div>
             <div className="grid3">
-                    <a className="card">
-                        d
-                    </a>
-                    <div className="card">
-                        e
-                    </div>
-                    <div className="QuoteCard card">
-                            <div>
-                                    <span data-scroll
-                                          data-scroll-direction="horizontal"
-                                          data-scroll-position="left"
-                                          data-scroll-speed="3" className="luxury-text">LETS MAKE WEB CHIC</span>
-                            </div>
-                    </div>
+                <a className="card">
+                    d
+                </a>
+                <div className="card">
+                    <CanvaThree />
+                </div>
+                <div className="QuoteCard card">
+                        <div>
+                                <span data-scroll
+                                      data-scroll-direction="horizontal"
+                                      data-scroll-position="left"
+                                      data-scroll-speed=".5" className="luxury-text">LETS MAKE WEB CHIC</span>
+                        </div>
+                </div>
             </div>
             <div className="grid3">
                 <a className="card">
@@ -113,10 +130,46 @@ function HomePage() {
                 </div>
             </div>
             <div className="grid2">
-                <div className="card">h</div>
-                <div className="card">i</div>
+                <div className="ContactCard card">
+                    <div>
+                        <h3>Get It Touch</h3>
+                        <form id="form" action="../../contactform.php" method="POST">
+                            <input type="text" name="name" id="name" placeholder="Your Name" required/>
+                            <input type="email" name="email" id="email" placeholder="Your Email" required/>
+                            <textarea name="message" placeholder="Your Message" id="message" required></textarea>
+                            <button type="submit">
+                                <img src={arrowe} alt=""/>
+                            </button>
+                        </form>
+                    </div>
+                    <div className="links">
+                        <a href="https://www.instagram.com/thomas_jeu/?hl=en" rel="noopener" target="_blank" className="hover-effect">
+                            <div>
+                                <span>@thomas_jeu</span>
+                                <span>@thomas_jeu</span>
+                            </div>
+                        </a>
+                        <a href="tel:0782755064" className="hover-effect">
+                            <div>
+                                <span>+33 782 755 064</span>
+                                <span>+33 782 755 064</span>
+                            </div>
+                        </a>
+                        <a href="mailto:jeuthomas03@gmail.com" className="hover-effect">
+                            <div>
+                                <span>jeuthomas03@gmail.com</span>
+                                <span>jeuthomas03@gmail.com</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div className="card">
+                    <Draggable grid={[25, 25]}>
+                        <div>I can now be moved around!</div>
+                    </Draggable>
+                </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

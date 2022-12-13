@@ -17,6 +17,10 @@
         align-items: flex-start;
         justify-content: space-between;
         border-right: var(--border-black);
+        background: var(--white-color);
+        .dflex{
+            justify-content: space-between;
+        }
         span{
             display: flex;
             flex-direction: row;

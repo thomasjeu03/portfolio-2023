@@ -1,3 +1,33 @@
+.FancyCard{
+    position: relative;
+    h3{
+        background: var(--dark-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 100;
+        position: absolute;
+        top: 0;
+        left: 8px;
+        font-size: 45px;
+        font-family: var(--gotham-font);
+    }
+    span{
+        font-family: var(--cooper-font);
+        opacity: .1;
+        font-size: 26vw;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        width: min-content;
+    }
+    .fancy-text{
+        position: absolute;
+        bottom: 5px;
+        right: 9px;
+    }
+}
+
 .TitleCard{
     grid-area: 1/1/2/3;
     display: flex;
@@ -5,6 +35,55 @@
     align-items: flex-start;
     justify-content: space-between;
     padding: 10px;
+    background: var(--white-color);
+}
+
+.LinkCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    transition: .3s ease-in-out;
+    background: var(--white-color);
+    .Arrow{
+        height: 100%;
+        aspect-ratio: 1;
+        margin-left: 0;
+        transition: .3s ease-in-out;
+        border-radius: 0;
+        img{
+            height: 100%;
+        }
+    }
+    &:hover{
+        background: var(--black-color);transition: .3s ease-in-out;
+        border-radius: 0 140px 140px 0;
+        .Arrow{
+            margin-left: 100%;
+            filter: invert(1);
+            transform: translateX(-100%) rotate(-45deg);
+            transition: .3s ease-in-out;
+        }
+    }
+}
+
+.CanvaThree{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    canvas{
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+        position: relative;
+    }
 }
 
 .QuoteCard{
@@ -42,6 +121,8 @@
         position: absolute;
         right: 0;
         top: 0;
+        transform: scale(0.75);
+        transform-origin: right top;
     }
     .Paperplane{
         position: absolute;
@@ -71,7 +152,7 @@
     }
     p{
         position: absolute;
-        bottom: 1px;
+        bottom: 10px;
         right: 10px;
     }
 }
@@ -132,7 +213,6 @@
             color: var(--white-color);
             height: 40px;
             border-radius: 5px;
-            cursor: pointer;
             .logo{
                 margin-right: 15px;
                 width: 30px;
@@ -176,6 +256,60 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.ContactCard{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    form{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: calc(100% - 60px);
+        button{
+            height: 90px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            background: var(--white-color);
+            transition: .3s ease-in-out;
+            border-radius: 0;
+            padding: 0;
+            img{
+                height: 100%;
+                left: 0;
+                position: relative;
+                transition: .3s ease-in-out;
+            }
+            &:hover{
+                filter: invert(1);
+                transition: .3s ease-in-out;
+                border-radius: 0 50px 50px 0;
+                padding: 10px;
+                img{
+                    left: 100%;
+                    transition: .3s ease-in-out;
+                    transform: translateX(-100%) rotate(-45deg);
+                }
+            }
+        }
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        gap: 10px;
+        a{
+            text-align: right;
         }
     }
 }

@@ -45,6 +45,18 @@
 
     <div id="root"></div>
 
+<!--    custom mouse-->
+    <div id="mouse" class="cursor_follower"></div>
+    <script>
+      document.body.addEventListener("mousemove", function(e) {
+        var curX = e.clientX;
+        var curY = e.clientY;
+        document.getElementById('mouse').style.left = curX - 10 + 'px';
+        document.getElementById('mouse').style.top = curY - 10 + 'px';
+      });
+    </script>
+
+<!--    bg paper-->
     <div class="bg">
       <img src="src/assets/img/bg.png" alt="">
     </div>

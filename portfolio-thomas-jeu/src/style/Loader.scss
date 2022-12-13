@@ -1,0 +1,94 @@
+.Loader{
+  z-index: 49;
+  position: fixed;
+  top: 16px;
+  overflow: hidden;
+  right: 16px;
+  width: calc(100vw - 212px);
+  border-radius: 0 16px 16px 0;
+  height: calc(100vh - 32px);
+  display: flex;
+  background: var(--beige-color);
+  flex-direction: column;
+  transform: translateY(0%);
+  align-items: center;
+  justify-content: center;
+  transition: 1s ease-out;
+  background: var(--light-color);
+  &>.grid3{
+    height: calc(calc(calc(100vh - 29px) / 5) * 2);
+    .spin{
+      padding: 10px;
+      border-left: var(--border-black);
+      img{
+        animation: rotation 8s infinite linear;
+        height: 100%;
+      }
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+      }
+    }
+    .h2{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h2{
+        font-size: 65px;
+        margin-right: auto;
+        font-family: var(--text-font) !important;
+      }
+    }
+    .card{
+      overflow: hidden;
+    }
+  }
+  .board{
+    grid-template-columns: repeat(1, 1fr) !important;
+    padding: 10px;
+    .card{
+      background: var(--primary-color);
+      border-radius: 0 0 6px 0;
+      height: 100%;
+      width: 100%;
+      &>div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        transform: translate(-5vw, -40vh) rotate(-30deg);
+        animation: boardmouv 2s infinite linear;
+        @keyframes boardmouv {
+          0% {
+            transform: translate(3vw, -45vh) rotate(-30deg);
+          }
+          100% {
+            transform: translate(-3vw, -35vh) rotate(-20deg);
+          }
+        }
+        span{
+          font-size: 108px;
+          line-height: 114px;
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+  &>.grid3+.grid3{
+    border-top: var(--border-black);
+  }
+  &>.grid3:nth-of-type(3n + 1){
+    height: calc(calc(calc(100vh - 29px) / 5) * 1);
+  }
+}
+.disparition{
+  z-index: -50;
+  transform: translateY(-100%);
+  transition: opacity 2s ease-out;
+}

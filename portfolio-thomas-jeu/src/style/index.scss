@@ -68,9 +68,7 @@
     --radius-20: 20px;
 }
 ::selection {
-    background: rgba(var(--dark-color-rgb), 0.8);
-    color: var(--white-color);
-    -webkit-text-fill-color: var(--white-color);
+    background: rgba(var(--dark-color-rgb), 0);
 }
 ::-webkit-scrollbar{
     width: 0;
@@ -83,6 +81,11 @@
 }
 *:focus{
     outline: none;
+}
+canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 html{
     font-family: var(--text-font);
@@ -105,6 +108,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    cursor: none;
 }
 figure{
     width: 100%;
@@ -153,6 +157,17 @@ h3{
     font-weight: 100;
     font-family: var(--luxury-font);
 }
+.fancy-text{
+    font-size: 65px;
+    line-height: 65px;
+    text-align: right;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(45deg, var(--dark-color), rgba(var(--primary-dark-color-rgb), 0.62), var(--dark-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: var(--fancy-font);
+    width: min-content;
+}
 form{
     width: 100%;
     height: auto;
@@ -165,29 +180,32 @@ a{
     color: var(--black-color);
     text-decoration: none;
     width: fit-content;
+    cursor: none !important;
+    &:hover{
+        .cursor_follower{
+            transform: scale(1.5);
+        }
+    }
 }
 p{
-    line-height: var(--3m);
     white-space: pre-line;
 }
 input,textarea, .input,select{
     background: none;
-    border: 3px solid var(--black-color);
-    border-radius: 20px;
     outline: none;
-    padding: 10px 20px;
+    border: none;
+    width: 100%;
+    padding: 10px;
     transition: 0.3s ease-in-out;
-    background: rgba(245, 243, 239, 0.6);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    position: relative;
+    border-bottom: 3px solid var(--black-color);
 }
 input:hover, textarea:hover, .input:hover, select:hover{
     transition: 0.3s ease-in-out;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    border-radius: 10px;
 }
 input:focus, textarea:focus, .input:focus{
-    background: var(--black-color);
-    color: var(--white-color);
+    border-bottom: 3px solid var(--primary-color);
 }
 textarea{
     width: 100% !important;
@@ -210,7 +228,7 @@ li{
     position: absolute;
     height: 2px;
     width: 0;
-    bottom: -10px;
+    bottom: -3px;
     right: 0;
     background-color: var(--dark-color);
     transition: 0.4s ease-in-out;
@@ -219,7 +237,7 @@ li{
     transition: 0.4s ease-in-out;
     left: 0;
     width: 100%;
-    background-color: var(--dark-color);
+    background-color: var(--primary-color);
 }
 .hover-effect{
     transform-style: preserve-3d;
@@ -364,8 +382,24 @@ li{
 /*    }*/
 /*}*/
 
+.cursor_follower{
+    --size-outer: max(22px,2vw);
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    border-radius: 100%;
+    background: var(--white-color);
+    width: var(--size-outer);
+    height: var(--size-outer);
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
 .dnone{
     display: none !important;
+}
+.w100{
+    width: 100%;
 }
 .dflex{
     display: flex !important;
