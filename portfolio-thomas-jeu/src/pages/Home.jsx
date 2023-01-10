@@ -1,20 +1,39 @@
 import '../style/Home.scss'
 import '../style/Card.scss'
 
-import Draggable from 'react-draggable';
 import LocomotiveScroll from 'locomotive-scroll';
-import React, { useEffect ,useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import { motion, useMotionValue } from "framer-motion"
 
 import spotifyLogo from '../assets/img/spotify.png';
 import arrowe from "../assets/img/arrow.svg";
 
-import Paperplane from "../components/Paperplane.jsx";
+import Paperplane from "../components/home/Paperplane.jsx";
 import Arrow from "../components/Arrow.jsx";
-import Song from "../components/Song.jsx";
+import Song from "../components/home/Song.jsx";
 import CanvaThree from "../components/CanvaThree.jsx";
+import CardProject from "../components/home/CardProject.jsx";
+import {Link} from "react-router-dom";
+import axios from 'axios';
 
 function HomePage() {
+    const [project, setProject] = useState([]);
+    useEffect(() => {
+        async function fetch() {
+            const response = await axios.get('/assets/data.json');
+            setProject(response.data);
+        }
+        fetch();
+    }, []);
+
+    const [son, setSon] = useState([]);
+    useEffect(() => {
+        async function fetchSon() {
+            const response = await axios.get('/assets/song.json');
+            setSon(response.data);
+        }
+        fetchSon();
+    }, []);
 
     let HomePage_Container = useRef(null);
 
@@ -29,7 +48,7 @@ function HomePage() {
 
     return (
         <motion.div
-            initial={{ opacity: 0}}
+            initial={{ opacity: 1}}
             animate={{ opacity: 1}}
             transition={{
                 duration: 2.5,
@@ -40,50 +59,55 @@ function HomePage() {
             data-scroll data-scroll-speed="3"
             className="HomePage_Container">
             <div className="grid3">
-                    <div className="FancyCard card">
-                        <h3 data-scroll
-                            data-scroll-direction="horizontal"
-                            data-scroll-position="left"
-                            data-scroll-speed="1">CLEAN & <br/> CLEAR</h3>
-                        <span>&</span>
-                        <h4 data-scroll
-                            data-scroll-direction="horizontal"
-                            data-scroll-position="left"
-                            data-scroll-speed="3" className="fancy-text">SOMETHING DIFFERENT</h4>
-                    </div>
-                    <a className="card">
-                        A
-                    </a>
+                <div className="FancyCard card">
+                    <h3 data-scroll
+                        data-scroll-direction="horizontal"
+                        data-scroll-position="left"
+                        data-scroll-speed="1">CLEAN & <br/> CLEAR</h3>
+                    <span>&</span>
+                    <h4 data-scroll
+                        data-scroll-direction="horizontal"
+                        data-scroll-position="left"
+                        data-scroll-speed="3" className="fancy-text">SOMETHING DIFFERENT</h4>
+                </div>
+                {project.map(item => {
+                    if (item.id === 1) {
+                        return (
+                            <CardProject key={item.id} {...item}/>
+                        );
+                    }
+                })}
             </div>
             <div className="grid3">
                 <div className="TitleCard card">
                     <h1>Thomas Jeu</h1>
                     <h2>Front-End Developer</h2>
                 </div>
-                <a href="https://ecohighland.fr/" target="_blank" rel="noopener" className="LinkCard card">
+                <Link to="/project" className="LinkCard card">
                     <Arrow  />
-                </a>
+                </Link>
             </div>
             <div className="grid3">
-                <a className="card">
-                    d
-                </a>
+                {project.map(item => {
+                    if (item.id === 2) {
+                        return (
+                            <CardProject key={item.id} {...item}/>
+                        );
+                    }
+                })}
                 <div className="card">
                     <CanvaThree />
                 </div>
                 <div className="QuoteCard card">
-                        <div>
-                                <span data-scroll
-                                      data-scroll-direction="horizontal"
-                                      data-scroll-position="left"
-                                      data-scroll-speed=".5" className="luxury-text">LETS MAKE WEB CHIC</span>
-                        </div>
+                    <div>
+                        <span data-scroll
+                              data-scroll-direction="horizontal"
+                              data-scroll-position="left"
+                              data-scroll-speed=".5" className="luxury-text">LETS MAKE WEB CHIC</span>
+                    </div>
                 </div>
             </div>
-            <div className="grid3">
-                <a className="card">
-                    e
-                </a>
+            <div className="grid2 border-bottom">
                 <div className="ResumeCard card">
                     <svg id="myResume" width="412" height="151" viewBox="0 0 412 151" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.07518 79.9941C1.07518 66.6002 1.07518 53.2062 1.07518 39.8122C1.07518 34.0855 1.07518 28.3588 1.07518 22.6321C1.07518 20.2569 0.586166 19.1029 2.10256 21.6618C7.51742 30.7993 11.0878 41.3295 17.4562 50.086C18.7504 51.8655 25.5151 59.9472 25.7323 54.0813C26.2975 38.8216 35.2895 22.1873 41.0289 8.24874C41.6089 6.83997 42.3746 1 44.6818 1C45.7446 1 45.4066 11.623 45.4808 12.4153C47.1834 30.5758 51.4168 49.5636 51.4168 67.6656" stroke="#1B202C" strokeWidth="2" strokeLinecap="round"/>
@@ -111,21 +135,29 @@ function HomePage() {
                     <Paperplane />
                     <p>* tap on a paper plane</p>
                 </div>
+                <div className="card">
+                    <ul>
+                        {project.map(item => (
+                            <li key={item.id}>{item.name}</li>
+                        ))}
+                    </ul>
+                </div>
             </div>
             <div className="grid3">
-                <div className="LanguagesCard card">f</div>
+                {project.map(item => {
+                    if (item.id === 3) {
+                        return (
+                            <CardProject key={item.id} {...item}/>
+                        );
+                    }
+                })}
                 <div className="SpotifyCard card">
                     <h3>Discover Me !</h3>
                     <img className="logoSpotify notInvert" src={spotifyLogo} alt="Spotify Logo"/>
                     <div className="playlist">
-                        <Song />
-                        <Song />
-                        <Song />
-                        <Song />
-                        <Song />
-                        <Song />
-                        <Song />
-                        <Song />
+                        {son.map(item => (
+                            <Song {...item}/>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -164,9 +196,7 @@ function HomePage() {
                     </div>
                 </div>
                 <div className="card">
-                    <Draggable grid={[25, 25]}>
-                        <div>I can now be moved around!</div>
-                    </Draggable>
+                   b
                 </div>
             </div>
         </motion.div>

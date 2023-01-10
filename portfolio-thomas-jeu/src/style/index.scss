@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'NewYork';
-    src: url('../assets/fonts/NewYork.otf') format('opentype');
+    src: url('../assets/fonts/NewYork.ttf') format('opentype');
     font-weight: 400;
     font-style: normal;
 }
@@ -37,7 +37,6 @@
     --cooper-font: 'Cooper' , serif;
     --gotham-font: 'Gotham' , serif;
 
-    /*Blue color*/
     --primary-color-rgb: 24, 33, 245 ;
     --primary-color: rgb(var(--primary-color-rgb));
 
@@ -50,7 +49,7 @@
     --dark-color: rgb(var(--dark-color-rgb));
     --black-color: var(--dark-color);
 
-    /*Black color*/
+    /*Light color*/
     --light-color-rgb: 239, 238, 234 ;
     --white-color-rgb: var(--light-color-rgb);
     --light-color: rgb(var(--light-color-rgb));
@@ -66,6 +65,42 @@
 
     --border-black: 3px solid var(--black-color);
     --radius-20: 20px;
+}
+.lightColorCyan{
+    --light-color-rgb: 230, 255, 255 ;
+    --white-color-rgb: var(--light-color-rgb);
+    --light-color: rgb(var(--light-color-rgb));
+    --white-color: var(--light-color);
+}
+.lightColorPink{
+    --light-color-rgb: 255, 230, 255 ;
+    --white-color-rgb: var(--light-color-rgb);
+    --light-color: rgb(var(--light-color-rgb));
+    --white-color: var(--light-color);
+}
+.colorRed{
+    --primary-color-rgb: 236, 39, 83 ;
+    --primary-color: rgb(var(--primary-color-rgb));
+    --primary-dark-color-rgb: var(--primary-color-rgb);
+    --primary-dark-color: rgb(var(--primary-dark-color-rgb));
+}
+.colorGreen{
+    --primary-color-rgb: 79,147,59;
+    --primary-color: rgb(var(--primary-color-rgb));
+    --primary-dark-color-rgb: var(--primary-color-rgb);
+    --primary-dark-color: rgb(var(--primary-dark-color-rgb));
+}
+.colorPink{
+    --primary-color-rgb: 238,98,224;
+    --primary-color: rgb(var(--primary-color-rgb));
+    --primary-dark-color-rgb: var(--primary-color-rgb);
+    --primary-dark-color: rgb(var(--primary-dark-color-rgb));
+}
+.colorOrange{
+    --primary-color-rgb: 236,145,39;
+    --primary-color: rgb(var(--primary-color-rgb));
+    --primary-dark-color-rgb: var(--primary-color-rgb);
+    --primary-dark-color: rgb(var(--primary-dark-color-rgb));
 }
 ::selection {
     background: rgba(var(--dark-color-rgb), 0);
@@ -189,6 +224,9 @@ a{
 }
 p{
     white-space: pre-line;
+}
+Link{
+    cursor: pointer;
 }
 input,textarea, .input,select{
     background: none;
@@ -395,8 +433,19 @@ li{
     pointer-events: none;
     mix-blend-mode: difference;
 }
+.border-bottom{
+    border-bottom: var(--border-black);
+}
 .dnone{
     display: none !important;
+}
+.area2{
+    grid-area: 1/2/2/4;
+    width: 100%;
+}
+.area3{
+    grid-area: 1/1/2/3;
+    width: 100%;
 }
 .w100{
     width: 100%;

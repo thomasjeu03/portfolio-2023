@@ -1,0 +1,26 @@
+.NotFoundPage_Container{
+  width: calc(100% - 212px);
+  min-height: 100%;
+  margin-left: 196px;
+  padding: 16px 0;
+  z-index: 2;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transform: translate(0) !important;
+  &>div:not(.grid3), &>figure{
+    height: calc(calc(calc(100vh - 29px) / 5) * 2);
+  }
+  &>.grid3{
+    height: calc(calc(calc(100vh - 29px) / 5) * 1);
+    border-bottom: var(--border-black);
+    .card+.card{
+      border-left: var(--border-black);
+    }
+  }
+  .card{
+    overflow: hidden;
+  }
+}

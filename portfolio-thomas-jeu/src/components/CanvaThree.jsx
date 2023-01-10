@@ -1,49 +1,28 @@
-import { useEffect, useRef } from "react";
-import * as THREE from "three";
+import {Canvas} from '@react-three/fiber'
+import {Box, OrbitControls, Sphere} from "@react-three/drei";
+import FillLight from "./threejs/FillLight.jsx";
+import GroundPlane from "./threejs/GroundPlane.jsx";
+import SnowBale from "./threejs/SnowBale.jsx";
 
-function CanvaThree () {
+function firstScene () {
+     return (
+        <Canvas className="CanvaThree">
+            <mesh rotation={[5, 0, 0]} position={[0, -10, 0]} >
+                <planeBufferGeometry attach="geometry" args={[100000, 100000]} />
+                <meshBasicMaterial color="#ec658d"/>
+            </mesh>
+            <GroundPlane rotation={[5, 0, 0]} position={[0, -6, -.8]} />
+            <GroundPlane rotation={[-5, 0, 0]} position={[0, 6, -.8]} />
+            <GroundPlane rotation={[0, 0, 0]} position={[0, 0, -5]} />
+            <FillLight brightness={2.6} color={"red"} />
 
-    const mountRef = useRef(null);
+            <SnowBale rotation={[0, 0, 0]} position={[0, 0, 0]} />
+            <SnowBale rotation={[0, 0, 0]} position={[-4, -2, 1.2]} />
+            <SnowBale rotation={[0, 0, 0]} position={[6, 2, -3]} />
 
-    useEffect(() => {
-
-        var scene = new THREE.Scene();
-        var camera = new THREE.PerspectiveCamera( 50, window.innerWidth/window.innerHeight, 0.5, 100 );
-        var renderer = new THREE.WebGLRenderer();
-
-        renderer.setSize( window.innerWidth, window.innerHeight );
-        mountRef.current.appendChild( renderer.domElement );
-
-        var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-        var material = new THREE.MeshBasicMaterial( { color: 0x171fea } );
-        var cube = new THREE.Mesh( geometry, material );
-
-        scene.add( cube );
-        camera.position.z = 5;
-
-        var animate = function () {
-            requestAnimationFrame( animate );
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
-            renderer.render( scene, camera );
-        }
-
-        let onWindowResize = function () {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize( window.innerWidth, window.innerHeight );
-        }
-
-        window.addEventListener("resize", onWindowResize, false);
-
-        animate();
-
-        return () => mountRef.current.removeChild( renderer.domElement);
-    }, []);
-
-    return (
-        <div className="CanvaThree" ref={mountRef}></div>
+            {/*<OrbitControls />*/}
+        </Canvas>
     );
 }
 
-export default CanvaThree
+export default firstScene

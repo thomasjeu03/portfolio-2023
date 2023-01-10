@@ -1,6 +1,7 @@
 import '../style/Nav.scss'
 
 import switch_btn from '../assets/img/switch_btn.svg';
+import { Link } from "react-router-dom";
 
 function Nav () {
     const handleClick = () => {
@@ -12,7 +13,9 @@ function Nav () {
         <div className="containerNav">
             <div className="nav">
                 <div className="dflex w100">
-                    <span><b>19</b>YRS <br/>OLD</span>
+                    <Link to="/">
+                        <span><b>19</b>YRS <br/>OLD</span>
+                    </Link>
                     <button className="darkModebutton" onClick={handleClick}>
                         <img src={switch_btn} alt="Switch dark mode"/>
                     </button>

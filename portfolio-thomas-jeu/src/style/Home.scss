@@ -1,7 +1,7 @@
 .HomePage_Container{
     width: calc(100% - 212px);
     min-height: 100%;
-    margin-left: 191px;
+    margin-left: 196px;
     padding: 16px 0;
     z-index: 2;
     height: auto;
@@ -22,7 +22,7 @@
     &>.grid3+.grid3, &>.grid2{
         border-top: var(--border-black);
     }
-    &>.grid3:nth-of-type(3n + 2){
+    &>.grid3:nth-of-type(2){
         height: calc(calc(calc(100vh - 29px) / 5) * 1);
     }
 }

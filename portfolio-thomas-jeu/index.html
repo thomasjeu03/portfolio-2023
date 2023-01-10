@@ -61,6 +61,18 @@
       <img src="src/assets/img/bg.png" alt="">
     </div>
 
+<!--    Random color-->
+    <script>
+      const colors = ['colorRed','colorBlue','colorGreen','colorPink','colorOrange'];
+      const classe = Math.floor(Math.random() * colors.length);
+      const app = document.getElementById('root');
+      app.classList.add(colors[classe]);
+
+      const lgcolors = ['lightColorCyan','lightColorWhite','lightColorPink'];
+      const lgclasse = Math.floor(Math.random() * lgcolors.length);
+      app.classList.add(lgcolors[lgclasse]);
+    </script>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
