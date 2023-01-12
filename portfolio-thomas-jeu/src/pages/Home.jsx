@@ -15,6 +15,7 @@ import CanvaThree from "../components/CanvaThree.jsx";
 import CardProject from "../components/home/CardProject.jsx";
 import {Link} from "react-router-dom";
 import axios from 'axios';
+import SplineScene from "../components/Spline.jsx"
 
 function HomePage() {
     const [project, setProject] = useState([]);
@@ -196,7 +197,7 @@ function HomePage() {
                     </div>
                 </div>
                 <div className="card">
-                   b
+                    <SplineScene />
                 </div>
             </div>
         </motion.div>
