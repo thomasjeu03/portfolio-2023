@@ -25,4 +25,7 @@
     &>.grid3:nth-of-type(2){
         height: calc(calc(calc(100vh - 29px) / 5) * 1);
     }
+    .LinkCard{
+        transform: rotateX(180deg);
+    }
 }

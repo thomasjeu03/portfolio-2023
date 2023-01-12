@@ -84,9 +84,9 @@ function HomePage() {
                     <h1>Thomas Jeu</h1>
                     <h2>Front-End Developer</h2>
                 </div>
-                <Link to="/project" className="LinkCard card">
+                <a href="#contact" className="LinkCard card">
                     <Arrow  />
-                </Link>
+                </a>
             </div>
             <div className="grid3">
                 {project.map(item => {
@@ -163,7 +163,7 @@ function HomePage() {
                 </div>
             </div>
             <div className="grid2">
-                <div className="ContactCard card">
+                <div id="contact" className="ContactCard card">
                     <div>
                         <h3>Get It Touch</h3>
                         <form id="form" action="../../contactform.php" method="POST">
