@@ -137,11 +137,7 @@ function HomePage() {
                     <p>* tap on a paper plane</p>
                 </div>
                 <div className="card">
-                    <ul>
-                        {project.map(item => (
-                            <li key={item.id}>{item.name}</li>
-                        ))}
-                    </ul>
+
                 </div>
             </div>
             <div className="grid3">
