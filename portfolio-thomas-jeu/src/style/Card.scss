@@ -251,13 +251,17 @@
             }
             .logo{
                 margin-right: 15px;
-                width: 30px;
+                width: 40px;
                 height: auto;
                 border-radius: 100%;
                 overflow: hidden;
                 aspect-ratio: 1 !important;
                 transform: rotate(0deg);
                 transition: 0.3s ease-in-out;
+                display: none;
+            }
+            .logo:nth-of-type(1){
+                display: block;
             }
             div{
                 height: 100%;
@@ -267,6 +271,7 @@
                 justify-content: space-between;
                 overflow: hidden;
                 text-align: left;
+                width: -webkit-fill-available;
                 b{
                     font-size: 15px;
                     line-height: 15px;
@@ -286,6 +291,9 @@
                     overflow: hidden;
                     text-align: left;
                     width: 100%;
+                }
+                .artiste:not(:nth-of-type(1)){
+                    display: none;
                 }
             }
             &:hover{

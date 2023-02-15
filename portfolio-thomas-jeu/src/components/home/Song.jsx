@@ -2,7 +2,7 @@ import React from "react";
 
 class Song extends React.Component {
     state = {
-        audio: new Audio(this.props.son),
+        audio: new Audio(this.props.track.href),
         isPlaying: false,
     };
 
@@ -18,19 +18,25 @@ class Song extends React.Component {
 
     render() {
         return (
-            <button onClick={this.playPause} key={this.props.id}
+            <button onClick={this.playPause} key={this.props.track.id}
                     className={`song ${this.state.isPlaying ? "isPlaying" : ""}`}>
-                <figure className="logo">
-                    <img className="notInvert" src={this.props.image}/>
-                </figure>
+                {this.props.track.album.images.map((image, index) => (
+                    <figure className="logo">
+                        <img className="notInvert" src={image.url}/>
+                    </figure>
+                ))}
                 <div>
-                    <b>{this.props.titre}</b>
-                    <p className="artiste">{this.props.artiste}</p>
-                    <p>{this.state.isPlaying ? "Is Playing..." : ""}</p>
+                <b>{this.props.track.name}</b>
+                {this.props.track.artists.map((artist, index) => (
+                    <p className="artiste">{artist.name}</p>
+                ))}
+                <p>{this.state.isPlaying ? "Is Playing..." : ""}</p>
                 </div>
-                <figure className="bg">
-                    <img className="notInvert" src={this.props.image}/>
-                </figure>
+                {this.props.track.album.images.map((image, index) => (
+                    <figure className="bg">
+                        <img className="notInvert" src={image.url}/>
+                    </figure>
+                ))}
             </button>
         )
     }

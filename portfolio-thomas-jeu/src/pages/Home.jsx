@@ -17,6 +17,9 @@ import {Link} from "react-router-dom";
 import axios from 'axios';
 import SplineScene from "../components/Spline.jsx"
 
+const TOKEN = 'BQCctS6IBciswHcRUBeqgIgB2kILwPISq9WlUKFeZ9XMqAu_55mThmgKaS5RVoo7m5uRcIlWOM8oRSc_SQv5wuiI-WI2HlyBwa1NKoHvo74eWoYoBZQL_VoDWTGLxVcpoRoUgQIw439HAt2dmf5FIeSWR-VPDP97bkqJfIouDzyaGLOURpcdozgM510khC4LDNBDUHzBJ_nnbCKPrXDRlVrzBTBHjP-NZ9LKz4fuFUnl-jZhqGpiHIo';
+axios.defaults.headers.common['Authorization'] = `Bearer ${TOKEN}`;
+
 function HomePage() {
     const [project, setProject] = useState([]);
     useEffect(() => {
@@ -27,17 +30,7 @@ function HomePage() {
         fetch();
     }, []);
 
-    const [son, setSon] = useState([]);
-    useEffect(() => {
-        async function fetchSon() {
-            const response = await axios.get('/assets/song.json');
-            setSon(response.data);
-        }
-        fetchSon();
-    }, []);
-
     let HomePage_Container = useRef(null);
-
     useEffect(() => {
         new LocomotiveScroll({
             el: document.querySelector('[data-scroll-container]'),
@@ -45,6 +38,19 @@ function HomePage() {
             getDirection: true
         });
 
+    }, []);
+
+    // Spotify
+    const [playlist, setPlaylist] = useState([]);
+    useEffect(() => {
+        axios.get('https://api.spotify.com/v1/playlists/37i9dQZF1DWSPMbB1kcXmo')
+            .then(response => {
+                setPlaylist(response.data.tracks.items);
+                console.log(response.data.tracks.items);
+            })
+            .catch(error => {
+                console.error(error);
+            });
     }, []);
 
     return (
@@ -158,7 +164,7 @@ function HomePage() {
                     <h3>Discover Me !</h3>
                     <img className="logoSpotify notInvert" src={spotifyLogo} alt="Spotify Logo"/>
                     <div className="playlist">
-                        {son.map(item => (
+                        {playlist.map(item => (
                             <Song {...item}/>
                         ))}
                     </div>
