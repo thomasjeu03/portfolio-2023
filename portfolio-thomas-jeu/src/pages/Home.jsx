@@ -137,12 +137,18 @@ function HomePage() {
                     <p>* tap on a paper plane</p>
                 </div>
                 <div className="card">
-
+                    {project.map(item => {
+                        if (item.id === 3) {
+                            return (
+                                <CardProject key={item.id} {...item}/>
+                            );
+                        }
+                    })}
                 </div>
             </div>
             <div className="grid3">
                 {project.map(item => {
-                    if (item.id === 3) {
+                    if (item.id === 4) {
                         return (
                             <CardProject key={item.id} {...item}/>
                         );
@@ -159,18 +165,19 @@ function HomePage() {
                 </div>
             </div>
             <div className="grid2">
+                <div></div>
                 <div id="contact" className="ContactCard card">
-                    <div>
-                        <h3>Get It Touch</h3>
-                        <form id="form" action="../../contactform.php" method="POST">
-                            <input type="text" name="name" id="name" placeholder="Your Name" required/>
-                            <input type="email" name="email" id="email" placeholder="Your Email" required/>
-                            <textarea name="message" placeholder="Your Message" id="message" required></textarea>
-                            <button type="submit">
-                                <img src={arrowe} alt=""/>
-                            </button>
-                        </form>
-                    </div>
+                    {/*<div>*/}
+                    {/*    <h3>Get It Touch</h3>*/}
+                    {/*    <form id="form" action="../../contactform.php" method="POST">*/}
+                    {/*        <input type="text" name="name" id="name" placeholder="Your Name" required/>*/}
+                    {/*        <input type="email" name="email" id="email" placeholder="Your Email" required/>*/}
+                    {/*        <textarea name="message" placeholder="Your Message" id="message" required></textarea>*/}
+                    {/*        <button type="submit">*/}
+                    {/*            <img src={arrowe} alt=""/>*/}
+                    {/*        </button>*/}
+                    {/*    </form>*/}
+                    {/*</div>*/}
                     <div className="links">
                         <a href="https://www.instagram.com/thomas_jeu/?hl=en" rel="noopener" target="_blank" className="hover-effect">
                             <div>
@@ -191,9 +198,6 @@ function HomePage() {
                             </div>
                         </a>
                     </div>
-                </div>
-                <div className="card">
-                    <SplineScene />
                 </div>
             </div>
         </motion.div>

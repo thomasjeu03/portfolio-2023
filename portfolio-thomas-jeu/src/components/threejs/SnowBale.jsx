@@ -2,6 +2,7 @@ import {useLoader} from "@react-three/fiber";
 import {Sphere} from "@react-three/drei";
 import {TextureLoader} from "three";
 import MapPath from "../../assets/img/snow.jpg";
+import { OrbitControls } from '@react-three/drei'
 
 function SnowBale({rotation, position}) {
     const Map = useLoader(TextureLoader, MapPath)
@@ -17,6 +18,7 @@ function SnowBale({rotation, position}) {
                 thickness=".7"
                 transmission="1"
                 roughness=".3"/>
+            <OrbitControls />
         </Sphere>
     );
 }
