@@ -18,7 +18,6 @@ function SnowBale({rotation, position}) {
                 thickness=".7"
                 transmission="1"
                 roughness=".3"/>
-            <OrbitControls />
         </Sphere>
     );
 }

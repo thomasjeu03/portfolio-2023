@@ -6,7 +6,7 @@
     "image": "https://collabyu.thomasjeu.fr/img/image2.jpg",
     "type": "Web-Application",
     "date": "MMXXI",
-    "desc": "Lorem ipsum",
+    "desc": "CollabyU is a great story maker.\n\nThanks to this social network, we can allow beautiful collaborations between different music enthusiasts or the emergence of new musical styles.\n\nOur project makes it possible to create a network, and to find the profiles with which it is possible to collaborate in order to find a place in the world of music!\n\nCreation of an identity as well as complete development.",
     "newclass" : "area2",
     "techno": [
       {
@@ -15,7 +15,7 @@
       },
       {
         "id": 2,
-        "name": "HTML/CSS"
+        "name": "HTML / CSS / JS"
       },
       {
         "id": 3,
@@ -27,10 +27,10 @@
     "id": 2,
     "name": "BC-Shop",
     "url": "",
-    "image": "https://media-cdn.tripadvisor.com/media/photo-s/1a/2b/ea/41/photo0jpg.jpg",
-    "type": "Web-site",
+    "image": "https://www.countryandtownhouse.com/wp-content/uploads/2018/09/nafinia-putra-Kwdp-0pok-I-unsplash.jpg",
+    "type": "Web-site (not-finish)",
     "date": "MMXXIII",
-    "desc": "Lorem ipsum",
+    "desc": "Welcome to BC SHOP Bikes and Café!\n\nPerformance road, gravel, enduro or marathon mountain bike, find your next bike ready to accompany you for all your desires among the most beautiful machines present at BC Shop.\nAccessories, components, equipment, come and take advantage of expert advice.\nRental Ebikes and enduro mountain bikes, we have teamed up with Jura Sick Guide to offer you some very nice bikes on the surrounding paths.\n\nAnd to perk you up, recharge bikes or pilots, BC Shop is also a café where Coralie offers sweet, savory, local beers and good coffee.\nAll homemade of course! (and even the dishes come from Haut Jura ;)\n\nCreation of an identity as well as complete development.",
     "newclass" : "",
     "techno": [
       {
@@ -43,7 +43,7 @@
       },
       {
         "id": 3,
-        "name": "HTML/SCSS/js"
+        "name": "HTML / SCSS / JS"
       },
       {
         "id": 4,
@@ -58,7 +58,7 @@
     "image": "https://butmmi.thomasjeu.fr/wp-content/uploads/2021/12/image1.jpg",
     "type": "Web-site",
     "date": "MMXXI",
-    "desc": "Lorem ipsum",
+    "desc": "Presentation site of the BUT MMI of Montbéliard\n\nCreation of a graphic identity and implementation of a website in headless CMS.\n\nThis project allows the graphic flexibility of a front in VueJS and the manageability of a back with Wordpress",
     "newclass" : "area3",
     "techno": [
       {
@@ -75,7 +75,7 @@
       },
       {
         "id": 4,
-        "name": "HTML/CSS/js"
+        "name": "HTML / CSS / JS"
       }
     ]
   },
@@ -86,12 +86,12 @@
     "image": "https://ecohighland.fr/img/carousel04.jpeg",
     "type": "Portfolio",
     "date": "MMXXII",
-    "desc": "Lorem ipsum",
+    "desc": "Creation of a single page presentation of a Highland cow breeding farm.\n\nCreation of an identity as well as complete development.",
     "newclass" : "",
     "techno": [
       {
         "id": 1,
-        "name": "HTML/CSS"
+        "name": "HTML / CSS"
       }
     ]
   }

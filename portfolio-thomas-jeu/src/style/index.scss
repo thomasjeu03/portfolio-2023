@@ -448,6 +448,9 @@ li{
 .dflex{
     display: flex !important;
 }
+.overflow_scroll{
+    overflow: scroll !important;
+}
 .disabled{
     pointer-events: none;
     cursor: not-allowed;

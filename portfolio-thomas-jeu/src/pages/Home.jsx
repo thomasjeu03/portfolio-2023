@@ -80,7 +80,7 @@ function HomePage() {
                 })}
             </div>
             <div className="grid3">
-                <div className="TitleCard card">
+                <div className="TitleCard card overflow_scroll">
                     <h1>Thomas Jeu</h1>
                     <h2>Front-End Developer</h2>
                 </div>

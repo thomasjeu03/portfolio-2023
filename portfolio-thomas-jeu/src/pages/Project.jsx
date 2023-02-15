@@ -37,26 +37,30 @@ function ProjectPage() {
                             data-scroll-container data-scroll data-scroll-speed="3"
                             className="ProjectPage_Container">
                             <div className="grid3">
-                                <div className="TitleCard card">
+                                <div className="TitleCard card overflow_scroll">
                                     <h1>{item.name}</h1>
                                     <h2>{item.type}</h2>
                                 </div>
-                                <a href={item.url} target="_blank" rel="noopener" className="LinkCard card">
-                                    <Arrow  />
-                                </a>
+                                {item.url ? <a href={item.url} target="_blank" rel="noopener" className="LinkCard card">
+                                        <Arrow  />
+                                </a>: null}
                             </div>
                             <figure>
                                 <img className="notInvert" src={item.image} alt={item.name}/>
                             </figure>
                             <div className="grid2">
-                                <div className="card desc">
-                                    <h3>About it</h3>
-                                    <p>{item.desc}</p>
+                                <div className="card desc overflow_scroll">
+                                    {item.desc ? <div>
+                                        <h3>About it</h3>
+                                        <p>{item.desc}</p>
+                                    </div> : null}
                                 </div>
-                                <div>
-                                    <div className="grid2 card">
-
-                                    </div>
+                                <div className="infos-right">
+                                    <ul className="grid2 card">
+                                        {item.techno.map((item, index) => (
+                                            <li className="techno" key={item.id}>{item.name}</li>
+                                        ))}
+                                    </ul>
                                     <div className="luxury-text QuoteCard card">
                                         <div>
                                             <span>{item.date}</span>
