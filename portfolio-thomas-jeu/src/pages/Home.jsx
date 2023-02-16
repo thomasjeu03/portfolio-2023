@@ -17,7 +17,7 @@ import {Link} from "react-router-dom";
 import axios from 'axios';
 import SplineScene from "../components/Spline.jsx"
 
-const TOKEN = 'BQCctS6IBciswHcRUBeqgIgB2kILwPISq9WlUKFeZ9XMqAu_55mThmgKaS5RVoo7m5uRcIlWOM8oRSc_SQv5wuiI-WI2HlyBwa1NKoHvo74eWoYoBZQL_VoDWTGLxVcpoRoUgQIw439HAt2dmf5FIeSWR-VPDP97bkqJfIouDzyaGLOURpcdozgM510khC4LDNBDUHzBJ_nnbCKPrXDRlVrzBTBHjP-NZ9LKz4fuFUnl-jZhqGpiHIo';
+const TOKEN = 'BQCpBCJQnRksd2cTYNNUpDYqCbWU6ji1UuniBLQli9q2deknUIEqjJbw-C3Smk258KBysBVL2RbvtnfKjb8DzyG8ZilB30KQr_3tjcY_rX1VRihHc-ahVDDKUSq7DfHroM4fQgvdkMSAx5w1JR_90efPfUGC3pPKdViuW3k20bQTgnriAQpPpRFdq-ZFXvksh3VvJ14ZpCVrK4ZQF0neE3MchweSUXiF8L_4gQElkDmVkQC2OYcwgbU_MsCLq_dApQ';
 axios.defaults.headers.common['Authorization'] = `Bearer ${TOKEN}`;
 
 function HomePage() {
@@ -46,10 +46,9 @@ function HomePage() {
         axios.get('https://api.spotify.com/v1/playlists/37i9dQZF1DWSPMbB1kcXmo')
             .then(response => {
                 setPlaylist(response.data.tracks.items);
-                console.log(response.data.tracks.items);
             })
             .catch(error => {
-                console.error(error);
+                console.log(error);
             });
     }, []);
 
@@ -68,14 +67,17 @@ function HomePage() {
             <div className="grid3">
                 <div className="FancyCard card">
                     <h3 data-scroll
-                        data-scroll-direction="horizontal"
-                        data-scroll-position="left"
+                        data-scroll-direction="vertical"
+                        data-scroll-position="top"
                         data-scroll-speed="1">CLEAN & <br/> CLEAR</h3>
-                    <span>&</span>
+                    <span data-scroll
+                        data-scroll-direction="vertical"
+                        data-scroll-position="top"
+                        data-scroll-speed="3">&</span>
                     <h4 data-scroll
-                        data-scroll-direction="horizontal"
-                        data-scroll-position="left"
-                        data-scroll-speed="3" className="fancy-text">SOMETHING DIFFERENT</h4>
+                        data-scroll-direction="vertical"
+                        data-scroll-position="top"
+                        data-scroll-speed="5" className="fancy-text">SOMETHING DIFFERENT</h4>
                 </div>
                 {project.map(item => {
                     if (item.id === 1) {
@@ -94,7 +96,7 @@ function HomePage() {
                     <Arrow  />
                 </a>
             </div>
-            <div className="grid3">
+            <div className="grid2">
                 {project.map(item => {
                     if (item.id === 2) {
                         return (
@@ -102,15 +104,12 @@ function HomePage() {
                         );
                     }
                 })}
-                <div className="card">
-                    <CanvaThree />
-                </div>
                 <div className="QuoteCard card">
                     <div>
                         <span data-scroll
-                              data-scroll-direction="horizontal"
-                              data-scroll-position="left"
-                              data-scroll-speed=".5" className="luxury-text">LETS MAKE WEB CHIC</span>
+                              data-scroll-direction="vertical"
+                              data-scroll-position="top"
+                              data-scroll-speed="4" className="luxury-text">LETS MAKE WEB CHIC <br/> <br/>WE LOVE THat <br/><br/> 💖</span>
                     </div>
                 </div>
             </div>
@@ -164,17 +163,33 @@ function HomePage() {
                     <h3>Discover Me !</h3>
                     <img className="logoSpotify notInvert" src={spotifyLogo} alt="Spotify Logo"/>
                     <div className="playlist">
-                        {playlist.map(item => (
-                            <Song {...item}/>
-                        ))}
+                        <p>Jukebox in creation...</p>
+                        {playlist.map(item => (<Song {...item}/>))}
                     </div>
                 </div>
             </div>
             <div className="grid2">
-                <div></div>
+                <div className="TechnoCard card overflow_scroll">
+                    <h3>My Skills</h3>
+                    <div className="grid2">
+                        <p className="techno">Web application design</p>
+                        <p className="techno">Figma</p>
+                        <p className="techno">Version Control Software (git)</p>
+                        <p className="techno">SCSS / SASS / BEM</p>
+                        <p className="techno">Uikit</p>
+                        <p className="techno">React JS</p>
+                        <p className="techno">Vue JS</p>
+                        <p className="techno">Locomotive JS</p>
+                        <p className="techno">Three JS</p>
+                        <p className="techno">Docker environment</p>
+                        <p className="techno">Code Igniter & Symphony Environment</p>
+                        <p className="techno">Strapi</p>
+                        <p className="techno">Wordpress Headless</p>
+                    </div>
+                </div>
                 <div id="contact" className="ContactCard card">
+                    <h3>Get It Touch</h3>
                     {/*<div>*/}
-                    {/*    <h3>Get It Touch</h3>*/}
                     {/*    <form id="form" action="../../contactform.php" method="POST">*/}
                     {/*        <input type="text" name="name" id="name" placeholder="Your Name" required/>*/}
                     {/*        <input type="email" name="email" id="email" placeholder="Your Email" required/>*/}
@@ -185,22 +200,28 @@ function HomePage() {
                     {/*    </form>*/}
                     {/*</div>*/}
                     <div className="links">
+                        <a href="https://bento.me/thomasjeu" rel="noopener" target="_blank" className="hover-effect">
+                            <div>
+                                <span>📡 My Bento board</span>
+                                <span>📡 My Bento board</span>
+                            </div>
+                        </a>
                         <a href="https://www.instagram.com/thomas_jeu/?hl=en" rel="noopener" target="_blank" className="hover-effect">
                             <div>
-                                <span>@thomas_jeu</span>
-                                <span>@thomas_jeu</span>
+                                <span>🎞️ @thomas_jeu</span>
+                                <span>🎞 @thomas_jeu</span>
                             </div>
                         </a>
                         <a href="tel:0782755064" className="hover-effect">
                             <div>
-                                <span>+33 782 755 064</span>
-                                <span>+33 782 755 064</span>
+                                <span>☎️ +33 782 755 064</span>
+                                <span>☎️ +33 782 755 064</span>
                             </div>
                         </a>
                         <a href="mailto:jeuthomas03@gmail.com" className="hover-effect">
                             <div>
-                                <span>jeuthomas03@gmail.com</span>
-                                <span>jeuthomas03@gmail.com</span>
+                                <span>📬 jeuthomas03@gmail.com</span>
+                                <span>📬 jeuthomas03@gmail.com</span>
                             </div>
                         </a>
                     </div>

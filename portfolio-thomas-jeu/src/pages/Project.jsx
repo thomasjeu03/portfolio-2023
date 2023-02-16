@@ -51,7 +51,7 @@ function ProjectPage() {
                             <div className="grid2">
                                 <div className="card desc overflow_scroll">
                                     {item.desc ? <div>
-                                        <h3>About it</h3>
+                                        <h3>About It</h3>
                                         <p>{item.desc}</p>
                                     </div> : null}
                                 </div>
