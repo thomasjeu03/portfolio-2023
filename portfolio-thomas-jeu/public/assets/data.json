@@ -52,6 +52,34 @@
     ]
   },
   {
+    "id": 3,
+    "name": "Calceare",
+    "url": "https://github.com/valentinmariot/calceare",
+    "image": "https://www.thomasjeu.fr/drive/Calceare.png",
+    "type": "Web-Application",
+    "date": "MMXXIII",
+    "desc": "Calceare is a web-application that allows any Sneakers fan to sell their products such as collectibles.\n\nCreation of an identity as well as complete development.",
+    "newclass" : "",
+    "techno": [
+      {
+        "id": 1,
+        "name": "HTML / CSS / JS"
+      },
+      {
+        "id": 2,
+        "name": "Symfony"
+      },
+      {
+        "id": 3,
+        "name": "Docker"
+      },
+      {
+        "id": 4,
+        "name": "Twig"
+      }
+    ]
+  },
+  {
     "id": 4,
     "name": "MMI_Montbeliard",
     "url": "https://butmmi.thomasjeu.fr/#/",
@@ -80,7 +108,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 5,
     "name": "EcoHighland",
     "url": "https://ecohighland.fr/",
     "image": "https://ecohighland.fr/img/carousel04.jpeg",

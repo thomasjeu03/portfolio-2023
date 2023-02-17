@@ -159,14 +159,21 @@ function HomePage() {
                         );
                     }
                 })}
-                <div className="SpotifyCard card">
-                    <h3>Discover Me !</h3>
-                    <img className="logoSpotify notInvert" src={spotifyLogo} alt="Spotify Logo"/>
-                    <div className="playlist">
-                        <p>Jukebox in creation...</p>
-                        {playlist.map(item => (<Song {...item}/>))}
-                    </div>
-                </div>
+                {project.map(item => {
+                    if (item.id === 5) {
+                        return (
+                            <CardProject key={item.id} {...item}/>
+                        );
+                    }
+                })}
+                {/*<div className="SpotifyCard card">*/}
+                {/*    <h3>Discover Me !</h3>*/}
+                {/*    <img className="logoSpotify notInvert" src={spotifyLogo} alt="Spotify Logo"/>*/}
+                {/*    <div className="playlist">*/}
+                {/*        <p>Jukebox in creation...</p>*/}
+                {/*        {playlist.map(item => (<Song {...item}/>))}*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
             <div className="grid2">
                 <div className="TechnoCard card overflow_scroll">
