@@ -224,7 +224,7 @@
         right: 10px;
     }
     @media only screen and (max-width: 700px){
-        height: 300px;
+        height: 200px;
         #sun{
             display: none;
         }
@@ -236,6 +236,9 @@
     .grid2{
         gap: var(--2m);
         margin-top: var(--1m);
+        @media only screen and (max-width: 700px){
+            gap: var(--1m);
+        }
     }
     .techno{
         font-weight: 800;
@@ -496,6 +499,9 @@
         margin-top: var(--1m);
         a{
             text-align: left;
+        }
+        @media only screen and (max-width: 700px){
+            gap: var(--1m);
         }
     }
 }

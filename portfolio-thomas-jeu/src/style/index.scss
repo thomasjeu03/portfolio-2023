@@ -490,10 +490,16 @@ li{
         line-height: 40px;
     }
     h2{
-        font-size: 35px;
+        font-size: 25px;
+        text-align: left;
     }
     .luxury-text{
         font-size: 50px;
         line-height: 40px;
+    }
+}
+@media only screen and (max-width: 500px){
+    h1{
+        font-size: 35px;
     }
 }
