@@ -28,4 +28,45 @@
     .LinkCard{
         transform: rotateX(180deg);
     }
+    @media only screen and (max-width: 1250px){
+        width: calc(100% - 162px);
+        margin-left: 146px;
+    }
+    @media only screen and (max-width: 900px){
+        padding-top: 63px !important;
+        width: calc(100% - 32px);
+        margin-left: 16px;
+        &>.grid3, &>.grid2{
+            height: calc(calc(calc(100vh - 79px) / 5) * 2);
+            .card+.card{
+                border-left: var(--border-black);
+            }
+        }
+        &>.grid3:nth-of-type(2){
+            height: calc(calc(calc(100vh - 79px) / 5) * 1);
+        }
+    }
+    @media only screen and (max-width: 700px){
+        padding-top: 60px !important;
+        .grid2, .grid3{
+            grid-template-columns: repeat(1, 1fr) !important;
+        }
+        &>.grid3, &>.grid2{
+            height: auto;
+            .card+.card{
+                border-left: none;
+                border-top: var(--border-black);
+            }
+        }
+        &>.grid3:nth-of-type(2){
+            height: auto !important;
+            h2{
+                text-align: left;
+                font-size: 25px;
+            }
+        }
+        .LinkCard{
+            display: none;
+        }
+    }
 }

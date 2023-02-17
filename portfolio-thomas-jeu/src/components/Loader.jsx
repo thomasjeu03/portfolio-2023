@@ -9,9 +9,9 @@ function Loader() {
             initial={{ y: 0}}
             animate={{ y: -2000}}
             transition={{
-                duration: .5,
+                duration: 1,
                 type: "spring", bounce: 0.25,
-                delay: 0.9
+                delay: 1.7
             }}
             className="Loader">
             <div className="grid3">

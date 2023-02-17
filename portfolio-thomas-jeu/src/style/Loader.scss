@@ -86,6 +86,34 @@
   &>.grid3:nth-of-type(3n + 1){
     height: calc(calc(calc(100vh - 29px) / 5) * 1);
   }
+  @media only screen and (max-width: 1250px){
+    width: calc(100% - 162px);
+  }
+  @media only screen and (max-width: 900px){
+    width: calc(100% - 32px);
+    border-radius: 16px;
+    &>.grid3:first-of-type{
+      grid-template-columns: repeat(1, 1fr) !important;
+      .spin{
+        grid-area: 1/1/2/2 !important;
+        border: none !important;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end !important;
+      }
+    }
+    .h2{
+      h2{
+        font-size: 35px !important;
+      }
+    }
+    .board{
+      .card{
+        border-radius: 0 0 6px 6px;
+      }
+    }
+  }
 }
 .disparition{
   z-index: -50;

@@ -6,6 +6,18 @@
   z-index: 2;
   height: auto;
   transform: translate(0) !important;
+  @media only screen and (max-width: 1250px){
+    width: calc(100% - 162px);
+    margin-left: 146px;
+  }
+  @media only screen and (max-width: 900px){
+    padding-top: 63px !important;
+    width: calc(100% - 32px);
+    margin-left: 16px;
+  }
+  @media only screen and (max-width: 900px){
+    padding-top: 60px !important;
+  }
 }
 .ProjectPage_Container{
   width: 100%;

@@ -21,6 +21,7 @@ const TOKEN = 'BQCpBCJQnRksd2cTYNNUpDYqCbWU6ji1UuniBLQli9q2deknUIEqjJbw-C3Smk258
 axios.defaults.headers.common['Authorization'] = `Bearer ${TOKEN}`;
 
 function HomePage() {
+    // DATA Projets
     const [project, setProject] = useState([]);
     useEffect(() => {
         async function fetch() {
@@ -30,6 +31,7 @@ function HomePage() {
         fetch();
     }, []);
 
+    // Locomotiv
     let HomePage_Container = useRef(null);
     useEffect(() => {
         new LocomotiveScroll({
@@ -48,9 +50,17 @@ function HomePage() {
                 setPlaylist(response.data.tracks.items);
             })
             .catch(error => {
-                console.log(error);
+                // console.log(error);
             });
     }, []);
+
+    // Scroll Down
+    const scrollerEnBas = () => {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    };
 
     return (
         <motion.div
@@ -92,9 +102,9 @@ function HomePage() {
                     <h1>Thomas Jeu</h1>
                     <h2>Front-End Developer</h2>
                 </div>
-                <a href="#contact" className="LinkCard card">
+                <div onClick={scrollerEnBas} className="LinkCard card">
                     <Arrow  />
-                </a>
+                </div>
             </div>
             <div className="grid2">
                 {project.map(item => {

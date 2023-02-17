@@ -17,6 +17,12 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'Eckmannpsych';
+    src: url('../assets/fonts/Eckmannpsych.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
     font-family: 'Cooper';
     src: url('../assets/fonts/Cooper.ttf') format('truetype');
     font-weight: 400;
@@ -33,7 +39,7 @@
     --title-font: 'NewYork', serif;
     --text-font: 'NeueMontreal', sans-serif;
     --luxury-font: 'Manuscribe', serif;
-    --fancy-font: eckmannpsych-medium, sans-serif;
+    --fancy-font: 'Eckmannpsych', sans-serif;
     --cooper-font: 'Cooper' , serif;
     --gotham-font: 'Gotham' , serif;
 
@@ -457,4 +463,37 @@ li{
     -ms-filter: grayscale(1);
     filter: grayscale(1);
     opacity: 0.3;
+}
+@media only screen and (max-width: 1250px){
+    h1{
+        font-size: 70px;
+        line-height: 60px;
+    }
+    h2{
+        font-size: 45px;
+    }
+    h3{
+        font-size: 22px;
+    }
+    .luxury-text{
+        font-size: 80px;
+        line-height: 62px;
+    }
+    .fancy-text{
+        font-size: 45px;
+        line-height: 45px;
+    }
+}
+@media only screen and (max-width: 700px){
+    h1{
+        font-size: 50px;
+        line-height: 40px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    .luxury-text{
+        font-size: 50px;
+        line-height: 40px;
+    }
 }
