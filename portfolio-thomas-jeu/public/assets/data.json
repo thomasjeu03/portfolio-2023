@@ -1,25 +1,29 @@
 [
   {
     "id": 1,
-    "name": "CollabyU",
-    "url": "https://collabyu.thomasjeu.fr/",
-    "image": "https://collabyu.thomasjeu.fr/img/image2.jpg",
+    "name": "Aesthetic",
+    "url": "https://aesthetic-tawny.vercel.app/",
+    "image": "https://www.thomasjeu.fr/drive/aesthetic_image.png",
     "type": "Web-Application",
-    "date": "MMXXI",
-    "desc": "CollabyU is a great story maker.\n\nThanks to this social network, we can allow beautiful collaborations between different music enthusiasts or the emergence of new musical styles.\n\nOur project makes it possible to create a network, and to find the profiles with which it is possible to collaborate in order to find a place in the world of music!\n\nCreation of an identity as well as complete development.",
+    "date": "MMXXIII",
+    "desc": "Be everything you want, but still aesthetic ! Discover the collection of aesthetic oversize clothing for bodybuilder and athlete.\n\nCreation of an identity as well as complete development.",
     "newclass" : "area2",
     "techno": [
       {
         "id": 1,
-        "name": "PHP"
+        "name": "ReactJS"
       },
       {
         "id": 2,
-        "name": "HTML / CSS / JS"
+        "name": "HTML / SCSS / JS"
       },
       {
         "id": 3,
-        "name": "MySQL"
+        "name": "Strapi"
+      },
+      {
+        "id": 4,
+        "name": "Figma"
       }
     ]
   },
