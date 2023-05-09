@@ -1,13 +1,13 @@
 [
   {
-    "id": 1,
+    "id": 2,
     "name": "Aesthetic",
     "url": "https://aesthetic-tawny.vercel.app/",
     "image": "https://www.thomasjeu.fr/drive/aesthetic_image.png",
     "type": "Web-Application",
     "date": "MMXXIII",
     "desc": "Be everything you want, but still aesthetic ! Discover the collection of aesthetic oversize clothing for bodybuilder and athlete.\n\nCreation of an identity as well as complete development.",
-    "newclass" : "area2",
+    "newclass" : "",
     "techno": [
       {
         "id": 1,
@@ -28,14 +28,14 @@
     ]
   },
   {
-    "id": 2,
+    "id": 1,
     "name": "BC-Shop",
-    "url": "",
-    "image": "https://www.countryandtownhouse.com/wp-content/uploads/2018/09/nafinia-putra-Kwdp-0pok-I-unsplash.jpg",
-    "type": "Web-site (building)",
+    "url": "https://bcshop.vercel.app/",
+    "image": "https://bcshop.vercel.app/assets/image01.feefaa3b.jpg",
+    "type": "Web-site",
     "date": "MMXXIII",
-    "desc": "Welcome to BC SHOP Bikes and Café!\n\nPerformance road, gravel, enduro or marathon mountain bike, find your next bike ready to accompany you for all your desires among the most beautiful machines present at BC Shop.\nAccessories, components, equipment, come and take advantage of expert advice.\nRental Ebikes and enduro mountain bikes, we have teamed up with Jura Sick Guide to offer you some very nice bikes on the surrounding paths.\n\nAnd to perk you up, recharge bikes or pilots, BC Shop is also a café where Coralie offers sweet, savory, local beers and good coffee.\nAll homemade of course! (and even the dishes come from Haut Jura ;)\n\nCreation of an identity as well as complete development.",
-    "newclass" : "",
+    "desc": "Welcome to BC SHOP Bikes and Caffe!\n\nPerformance road, gravel, enduro or marathon mountain bike, find your next bike ready to accompany you for all your desires among the most beautiful machines present at BC Shop.\nAccessories, components, equipment, come and take advantage of expert advice.\nRental Ebikes and enduro mountain bikes, we have teamed up with Jura Sick Guide to offer you some very nice bikes on the surrounding paths.\n\nAnd to perk you up, recharge bikes or pilots, BC Shop is also a café where Coralie offers sweet, savory, local beers and good coffee.\nAll homemade of course! (and even the dishes come from Haut Jura ;)\n\nCreation of an identity as well as complete development.",
+    "newclass" : "area2",
     "techno": [
       {
         "id": 1,
@@ -43,7 +43,7 @@
       },
       {
         "id": 2,
-        "name": "Strapi"
+        "name": "Wordpress headless"
       },
       {
         "id": 3,
@@ -51,7 +51,11 @@
       },
       {
         "id": 4,
-        "name": "LocomotivJS"
+        "name": "Framer Motion"
+      },
+      {
+        "id": 5,
+        "name": "Axios"
       }
     ]
   },

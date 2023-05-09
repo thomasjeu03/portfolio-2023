@@ -6,8 +6,8 @@ import Nav from "./components/Nav.jsx";
 import Loader from "./components/Loader.jsx";
 import {Routes, Route} from "react-router-dom";
 import HomePage from "./pages/Home.jsx";
-import NotFound from "./pages/NotFound.jsx";
 import Project from "./pages/Project.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 function App() {
     const [loading, setLoading] = useState(false);
