@@ -200,8 +200,9 @@ function HomePage() {
                         <p className="techno">Three JS</p>
                         <p className="techno">Docker environment</p>
                         <p className="techno">Code Igniter & Symphony Environment</p>
-                        <p className="techno">Strapi</p>
+                        <p className="techno">Vercel</p>
                         <p className="techno">Wordpress Headless</p>
+                        <p className="techno">Framer Motion</p>
                     </div>
                 </div>
                 <div id="contact" className="ContactCard card">
