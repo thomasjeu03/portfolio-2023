@@ -224,10 +224,10 @@ function HomePage() {
                                 <span>📡 My Bento board</span>
                             </div>
                         </a>
-                        <a href="https://www.instagram.com/thomas_jeu/?hl=en" rel="noopener" target="_blank" className="hover-effect">
+                        <a href="https://www.instagram.com/thomasjeu/?hl=en" rel="noopener" target="_blank" className="hover-effect">
                             <div>
-                                <span>🎞️ @thomas_jeu</span>
-                                <span>🎞 @thomas_jeu</span>
+                                <span>🎞️ @thomasjeu</span>
+                                <span>🎞 @thomasjeu</span>
                             </div>
                         </a>
                         <a href="tel:0782755064" className="hover-effect">
