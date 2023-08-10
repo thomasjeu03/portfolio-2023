@@ -24,9 +24,8 @@ function App() {
             <Nav />
             {loading ? (<Loader />) : (<div></div>)}
             <Routes>
-                <Route path='/' element={<HomePage/>} />
-                <Route path="/:projectName" element={<Project />} />
-                <Route path='/project' element={<Project />} />
+                <Route exact path='/' element={<HomePage/>} />
+                <Route exact path="/:projectName" element={<Project />} />
                 <Route path='*' element={<NotFound/>} />
             </Routes>
         </div>

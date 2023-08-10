@@ -88,15 +88,15 @@ function HomePage() {
                     <h3 data-scroll
                         data-scroll-direction="vertical"
                         data-scroll-position="top"
-                        data-scroll-speed="1">CLEAN & <br/> CLEAR</h3>
+                        data-scroll-speed="-3">CLEAN & <br/> CLEAR</h3>
                     <span data-scroll
                         data-scroll-direction="vertical"
                         data-scroll-position="top"
-                        data-scroll-speed="3">&</span>
+                        data-scroll-speed="-3">&</span>
                     <h4 data-scroll
                         data-scroll-direction="vertical"
                         data-scroll-position="top"
-                        data-scroll-speed="5" className="fancy-text">SOMETHING DIFFERENT</h4>
+                        data-scroll-speed="-5" className="fancy-text">SOMETHING DIFFERENT</h4>
                 </div>
                 {project.map(item => {
                     if (item.id === 1) {
