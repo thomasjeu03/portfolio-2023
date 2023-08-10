@@ -25,8 +25,8 @@ function App() {
             {loading ? (<Loader />) : (<div></div>)}
             <Routes>
                 <Route exact path='/' element={<HomePage/>} />
-                <Route exact path="/:projectName" element={<Project />} />
                 <Route path='*' element={<NotFound/>} />
+                <Route exact path="/:projectName" element={<Project />} />
             </Routes>
         </div>
     );

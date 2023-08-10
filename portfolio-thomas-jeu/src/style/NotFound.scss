@@ -10,8 +10,11 @@
   align-items: flex-start;
   justify-content: flex-start;
   transform: translate(0) !important;
+  .TitleCard{
+    grid-area: 1/1/2/3;
+  }
   &>div:not(.grid3), &>figure{
-    height: calc(calc(calc(100vh - 29px) / 5) * 2);
+    height: auto;
   }
   &>.grid3{
     height: calc(calc(calc(100vh - 29px) / 5) * 1);
