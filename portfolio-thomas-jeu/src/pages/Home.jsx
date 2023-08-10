@@ -77,7 +77,7 @@ function HomePage() {
             <div className="grid3">
                 <div className="TitleCard card overflow_scroll">
                     <h1>Thomas Jeu</h1>
-                    <h2>Freelance Creative Developer</h2>
+                    <h2>Développeur Créatif Freelance</h2>
                 </div>
                 {/*<div onClick={scrollerEnBas} className="LinkCard card">
                     <Arrow  />
