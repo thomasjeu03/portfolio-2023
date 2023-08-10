@@ -25,6 +25,9 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  .TitleCard{
+    grid-area: 1/1/2/3;
+  }
   &>div:not(.grid3), &>figure{
     height: calc(calc(calc(100vh - 29px) / 5) * 2);
   }
