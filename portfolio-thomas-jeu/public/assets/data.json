@@ -117,17 +117,25 @@
   },
   {
     "id": 5,
-    "name": "EcoHighland",
+    "name": "Highlands du Haut-Jura",
     "url": "https://ecohighland.fr/",
-    "image": "https://ecohighland.fr/img/carousel04.jpeg",
+    "image": "https://ecohighland.fr/assets/carousel01.e9293dd6.jpg",
     "type": "Portfolio",
-    "date": "MMXXII",
+    "date": "MMXXIII",
     "desc": "Creation of a single page presentation of a Highland cow breeding farm.\n\nCreation of an identity as well as complete development.",
     "newclass" : "",
     "techno": [
       {
         "id": 1,
-        "name": "HTML / CSS"
+        "name": "React JS"
+      },
+      {
+        "id": 2,
+        "name": "HTML / CSS / JS"
+      },
+      {
+        "id": 3,
+        "name": "Framer Motion"
       }
     ]
   }
