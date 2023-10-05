@@ -7,6 +7,7 @@ import {motion} from "framer-motion";
 import Arrow from "../components/Arrow.jsx";
 import {useLocation, useParams} from "react-router-dom";
 import axios from "axios";
+import NotFound from "./NotFound.jsx";
 
 function ProjectPage() {
     const location = useLocation();

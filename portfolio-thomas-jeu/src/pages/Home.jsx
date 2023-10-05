@@ -75,19 +75,28 @@ function HomePage() {
             data-scroll data-scroll-speed="3"
             className="HomePage_Container">
             <div className="grid3">
+                <div className="TitleCard card overflow_scroll">
+                    <h1>Thomas Jeu</h1>
+                    <h2>Développeur Créatif Freelance</h2>
+                </div>
+                {/*<div onClick={scrollerEnBas} className="LinkCard card">
+                    <Arrow  />
+                </div>*/}
+            </div>
+            <div className="grid3">
                 <div className="FancyCard card">
                     <h3 data-scroll
                         data-scroll-direction="vertical"
                         data-scroll-position="top"
-                        data-scroll-speed="1">CLEAN & <br/> CLEAR</h3>
+                        data-scroll-speed="-3">CLEAN & <br/> CLEAR</h3>
                     <span data-scroll
                         data-scroll-direction="vertical"
                         data-scroll-position="top"
-                        data-scroll-speed="3">&</span>
+                        data-scroll-speed="-3">&</span>
                     <h4 data-scroll
                         data-scroll-direction="vertical"
                         data-scroll-position="top"
-                        data-scroll-speed="5" className="fancy-text">SOMETHING DIFFERENT</h4>
+                        data-scroll-speed="-5" className="fancy-text">SOMETHING DIFFERENT</h4>
                 </div>
                 {project.map(item => {
                     if (item.id === 1) {
@@ -96,15 +105,6 @@ function HomePage() {
                         );
                     }
                 })}
-            </div>
-            <div className="grid3">
-                <div className="TitleCard card overflow_scroll">
-                    <h1>Thomas Jeu</h1>
-                    <h2>Front-End Developer</h2>
-                </div>
-                <div onClick={scrollerEnBas} className="LinkCard card">
-                    <Arrow  />
-                </div>
             </div>
             <div className="grid2">
                 {project.map(item => {
@@ -200,8 +200,9 @@ function HomePage() {
                         <p className="techno">Three JS</p>
                         <p className="techno">Docker environment</p>
                         <p className="techno">Code Igniter & Symphony Environment</p>
-                        <p className="techno">Strapi</p>
+                        <p className="techno">Vercel</p>
                         <p className="techno">Wordpress Headless</p>
+                        <p className="techno">Framer Motion</p>
                     </div>
                 </div>
                 <div id="contact" className="ContactCard card">
@@ -223,10 +224,10 @@ function HomePage() {
                                 <span>📡 My Bento board</span>
                             </div>
                         </a>
-                        <a href="https://www.instagram.com/thomas_jeu/?hl=en" rel="noopener" target="_blank" className="hover-effect">
+                        <a href="https://www.instagram.com/thomasjeu/?hl=en" rel="noopener" target="_blank" className="hover-effect">
                             <div>
-                                <span>🎞️ @thomas_jeu</span>
-                                <span>🎞 @thomas_jeu</span>
+                                <span>🎞️ @thomasjeu</span>
+                                <span>🎞 @thomasjeu</span>
                             </div>
                         </a>
                         <a href="tel:0782755064" className="hover-effect">

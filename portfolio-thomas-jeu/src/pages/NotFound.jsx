@@ -2,6 +2,7 @@ import '../style/NotFound.scss'
 
 import React, { useEffect ,useRef} from "react";
 import {motion} from "framer-motion";
+import Arrow from "../components/Arrow.jsx";
 
 function NotFound() {
     return (
@@ -13,10 +14,13 @@ function NotFound() {
                     <h1>404</h1>
                     <h2>Page Not Found</h2>
                 </div>
+                <a href="/" rel="noopener" className="LinkCard card">
+                    <Arrow  />
+                </a>
             </div>
-            <div>
-
-            </div>
+            <figure>
+                <img className="notInvert" src="https://cdn.dribbble.com/users/1129101/screenshots/3513987/404.gif" alt="Page 404"/>
+            </figure>
         </motion.div>
     )
 }

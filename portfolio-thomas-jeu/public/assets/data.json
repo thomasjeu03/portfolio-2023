@@ -30,8 +30,8 @@
   {
     "id": 1,
     "name": "BC-Shop",
-    "url": "https://bcshop.vercel.app/",
-    "image": "https://bcshop.vercel.app/assets/image01.feefaa3b.jpg",
+    "url": "https://bc-shop.fr/",
+    "image": "https://bc-shop.fr/wp-content/uploads/2023/07/2306_BEN_BECKER_bcshop_0101-scaled.jpg",
     "type": "Web-site",
     "date": "MMXXIII",
     "desc": "Welcome to BC SHOP Bikes and Caffe!\n\nPerformance road, gravel, enduro or marathon mountain bike, find your next bike ready to accompany you for all your desires among the most beautiful machines present at BC Shop.\nAccessories, components, equipment, come and take advantage of expert advice.\nRental Ebikes and enduro mountain bikes, we have teamed up with Jura Sick Guide to offer you some very nice bikes on the surrounding paths.\n\nAnd to perk you up, recharge bikes or pilots, BC Shop is also a café where Coralie offers sweet, savory, local beers and good coffee.\nAll homemade of course! (and even the dishes come from Haut Jura ;)\n\nCreation of an identity as well as complete development.",
@@ -56,6 +56,18 @@
       {
         "id": 5,
         "name": "Axios"
+      },
+      {
+        "id": 6,
+        "name": "Github"
+      },
+      {
+        "id": 7,
+        "name": "Vercel"
+      },
+      {
+        "id": 8,
+        "name": "Figma"
       }
     ]
   },

@@ -22,7 +22,7 @@
     &>.grid3+.grid3, &>.grid2{
         border-top: var(--border-black);
     }
-    &>.grid3:nth-of-type(2){
+    &>.grid3:nth-of-type(1){
         height: calc(calc(calc(100vh - 29px) / 5) * 1);
     }
     .LinkCard{
@@ -42,7 +42,7 @@
                 border-left: var(--border-black);
             }
         }
-        &>.grid3:nth-of-type(2){
+        &>.grid3:nth-of-type(1){
             height: calc(calc(calc(100vh - 79px) / 5) * 1);
         }
     }
@@ -58,7 +58,7 @@
                 border-top: var(--border-black);
             }
         }
-        &>.grid3:nth-of-type(2){
+        &>.grid3:nth-of-type(1){
             height: auto !important;
             h2{
                 text-align: left;
